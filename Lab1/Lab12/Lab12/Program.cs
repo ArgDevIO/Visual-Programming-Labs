@@ -12,11 +12,13 @@ namespace Lab12
 			N = Convert.ToInt32(Console.ReadLine());
 
 			double sum = 0;
+			Random random = new Random();
+
 			int[] numbers = new int[N];
-			Console.WriteLine("Enter {0} numbers:", N);
+			Console.WriteLine("Generating {0} random numbers...", N);
 			for (int i = 0; i < N; i++)
 			{
-				numbers[i] = Convert.ToInt32(Console.ReadLine());
+				numbers[i] = random.Next(1, 1000);
 				sum += (double)numbers[i];
 			}
 
