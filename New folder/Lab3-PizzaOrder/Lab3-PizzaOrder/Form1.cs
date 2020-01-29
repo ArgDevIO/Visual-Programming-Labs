@@ -82,5 +82,54 @@ namespace Lab3_PizzaOrder
 
 			calculateTotal();
 		}
+
+		private void lbDessert_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			switch (lbDessert.SelectedIndex)
+			{
+				case 0:
+					tbDessertPrice.Text = "80";
+					break;
+				case 1:
+					tbDessertPrice.Text = "120";
+					break;
+				case 2:
+					tbDessertPrice.Text = "160";
+					break;
+			}
+			calculateTotal();
+		}
+
+		private void tbDessertPrice_TextChanged(object sender, EventArgs e)
+		{
+			calculateTotal();
+		}
+
+		private void tbTotalPayment_TextChanged(object sender, EventArgs e)
+		{
+			calculateChange();
+		}
+
+		private void calculateChange()
+		{
+			float totalForPayment = 0f;
+			float.TryParse(tbTotalPayment.Text, out totalForPayment);
+
+			float paid = 0f;
+			float.TryParse(tbPaid.Text, out paid);
+
+			float change = paid - totalForPayment;
+			tbChange.Text = change.ToString();
+		}
+
+		private void tbPaid_TextChanged(object sender, EventArgs e)
+		{
+			calculateChange();
+		}
+
+		private void tbChange_TextChanged(object sender, EventArgs e)
+		{
+			btnOrder.Enabled = !tbChange.Text.Contains("-");
+		}
 	}
 }

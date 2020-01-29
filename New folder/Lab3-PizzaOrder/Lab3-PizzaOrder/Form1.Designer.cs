@@ -63,7 +63,7 @@
 			this.btnCancel = new System.Windows.Forms.Button();
 			this.tbDessertPrice = new System.Windows.Forms.TextBox();
 			this.label7 = new System.Windows.Forms.Label();
-			this.listBox1 = new System.Windows.Forms.ListBox();
+			this.lbDessert = new System.Windows.Forms.ListBox();
 			this.groupBox5 = new System.Windows.Forms.GroupBox();
 			this.tbChange = new System.Windows.Forms.TextBox();
 			this.tbPaid = new System.Windows.Forms.TextBox();
@@ -387,7 +387,7 @@
 			this.groupBox4.Controls.Add(this.btnCancel);
 			this.groupBox4.Controls.Add(this.tbDessertPrice);
 			this.groupBox4.Controls.Add(this.label7);
-			this.groupBox4.Controls.Add(this.listBox1);
+			this.groupBox4.Controls.Add(this.lbDessert);
 			this.groupBox4.Location = new System.Drawing.Point(13, 302);
 			this.groupBox4.Name = "groupBox4";
 			this.groupBox4.Size = new System.Drawing.Size(302, 153);
@@ -397,6 +397,7 @@
 			// 
 			// btnOrder
 			// 
+			this.btnOrder.Enabled = false;
 			this.btnOrder.Location = new System.Drawing.Point(169, 86);
 			this.btnOrder.Name = "btnOrder";
 			this.btnOrder.Size = new System.Drawing.Size(120, 23);
@@ -419,6 +420,7 @@
 			this.tbDessertPrice.Name = "tbDessertPrice";
 			this.tbDessertPrice.Size = new System.Drawing.Size(120, 20);
 			this.tbDessertPrice.TabIndex = 2;
+			this.tbDessertPrice.TextChanged += new System.EventHandler(this.tbDessertPrice_TextChanged);
 			// 
 			// label7
 			// 
@@ -429,17 +431,18 @@
 			this.label7.TabIndex = 1;
 			this.label7.Text = "Dessert Price:";
 			// 
-			// listBox1
+			// lbDessert
 			// 
-			this.listBox1.FormattingEnabled = true;
-			this.listBox1.Items.AddRange(new object[] {
+			this.lbDessert.FormattingEnabled = true;
+			this.lbDessert.Items.AddRange(new object[] {
             "Fruit Salad",
             "Ice Cream",
             "Cake"});
-			this.listBox1.Location = new System.Drawing.Point(7, 20);
-			this.listBox1.Name = "listBox1";
-			this.listBox1.Size = new System.Drawing.Size(153, 121);
-			this.listBox1.TabIndex = 0;
+			this.lbDessert.Location = new System.Drawing.Point(7, 20);
+			this.lbDessert.Name = "lbDessert";
+			this.lbDessert.Size = new System.Drawing.Size(153, 121);
+			this.lbDessert.TabIndex = 0;
+			this.lbDessert.SelectedIndexChanged += new System.EventHandler(this.lbDessert_SelectedIndexChanged);
 			// 
 			// groupBox5
 			// 
@@ -463,6 +466,8 @@
 			this.tbChange.Name = "tbChange";
 			this.tbChange.Size = new System.Drawing.Size(159, 26);
 			this.tbChange.TabIndex = 5;
+			this.tbChange.Text = "0";
+			this.tbChange.TextChanged += new System.EventHandler(this.tbChange_TextChanged);
 			// 
 			// tbPaid
 			// 
@@ -471,6 +476,8 @@
 			this.tbPaid.Name = "tbPaid";
 			this.tbPaid.Size = new System.Drawing.Size(159, 26);
 			this.tbPaid.TabIndex = 3;
+			this.tbPaid.Text = "0";
+			this.tbPaid.TextChanged += new System.EventHandler(this.tbPaid_TextChanged);
 			// 
 			// tbTotalPayment
 			// 
@@ -480,6 +487,7 @@
 			this.tbTotalPayment.ReadOnly = true;
 			this.tbTotalPayment.Size = new System.Drawing.Size(159, 26);
 			this.tbTotalPayment.TabIndex = 1;
+			this.tbTotalPayment.TextChanged += new System.EventHandler(this.tbTotalPayment_TextChanged);
 			// 
 			// label10
 			// 
@@ -571,7 +579,7 @@
 		private System.Windows.Forms.Button btnCancel;
 		private System.Windows.Forms.TextBox tbDessertPrice;
 		private System.Windows.Forms.Label label7;
-		private System.Windows.Forms.ListBox listBox1;
+		private System.Windows.Forms.ListBox lbDessert;
 		private System.Windows.Forms.GroupBox groupBox5;
 		private System.Windows.Forms.TextBox tbChange;
 		private System.Windows.Forms.TextBox tbPaid;
