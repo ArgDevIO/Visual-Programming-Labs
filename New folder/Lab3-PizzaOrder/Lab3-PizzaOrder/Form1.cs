@@ -145,19 +145,19 @@ namespace Lab3_PizzaOrder
 
 			// Pizza Size
 			var selectedPizzaRadioButton = gbSize.Controls.OfType<RadioButton>().First(r => r.Checked);
-			sb.Append(selectedPizzaRadioButton.Text).Append(" Pizza\n");
+			sb.Append(selectedPizzaRadioButton.Text.ToUpper()).Append(" PIZZA\n");
 
 			// Extras
 			List<CheckBox> selectedExtrasCheckBoxes = gbExtras.Controls.OfType<CheckBox>().Where(cb => cb.Checked).ToList();
 			if (selectedExtrasCheckBoxes.Count != 0) 
-				sb.Append("Extras:\n");
+				sb.Append("--Extras:\n");
 			foreach (CheckBox cb in selectedExtrasCheckBoxes)
 				sb.Append(cb.Text).Append("\n");
 
 			// Drinks
 			List<TextBox> drinksQtyTBs = gbDrinks.Controls.OfType<TextBox>().Where(tb => !tb.Text.Equals("0") && tb.Name.ToLower().Contains("quantity")).ToList();
 			if (drinksQtyTBs.Count != 0)
-				sb.Append("Drinks:\n");
+				sb.Append("--Drink:\n");
 			foreach (TextBox tb in drinksQtyTBs)
 			{
 				sb.Append(tb.Text);
@@ -165,6 +165,11 @@ namespace Lab3_PizzaOrder
 				else if (tb.Name.Contains("Soft")) sb.Append(" Apple / Orange juice\n");
 				else if (tb.Name.Contains("Beer")) sb.Append(" Beer\n");
 			}
+
+			// Dessert
+			string selectedDessert = lbDessert.SelectedItem.ToString();
+			if (!string.IsNullOrEmpty(selectedDessert))
+				sb.Append("--Dessert:\n").Append(selectedDessert);
 
 			MessageBox.Show(sb.ToString(), "Your order", MessageBoxButtons.OK);
 		}
