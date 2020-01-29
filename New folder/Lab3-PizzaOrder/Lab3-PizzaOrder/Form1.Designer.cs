@@ -274,6 +274,7 @@
 			this.tbDrinksBeerPrice.Size = new System.Drawing.Size(100, 20);
 			this.tbDrinksBeerPrice.TabIndex = 8;
 			this.tbDrinksBeerPrice.Text = "80";
+			this.tbDrinksBeerPrice.TextChanged += new System.EventHandler(this.drinkTotal_textChanged);
 			// 
 			// tbDrinksSoftPrice
 			// 
@@ -282,6 +283,7 @@
 			this.tbDrinksSoftPrice.Size = new System.Drawing.Size(100, 20);
 			this.tbDrinksSoftPrice.TabIndex = 7;
 			this.tbDrinksSoftPrice.Text = "70";
+			this.tbDrinksSoftPrice.TextChanged += new System.EventHandler(this.drinkTotal_textChanged);
 			// 
 			// tbDrinksSodaPrice
 			// 
@@ -290,6 +292,7 @@
 			this.tbDrinksSodaPrice.Size = new System.Drawing.Size(100, 20);
 			this.tbDrinksSodaPrice.TabIndex = 6;
 			this.tbDrinksSodaPrice.Text = "60";
+			this.tbDrinksSodaPrice.TextChanged += new System.EventHandler(this.drinkTotal_textChanged);
 			// 
 			// tbDrinksBeerTotal
 			// 
@@ -298,7 +301,6 @@
 			this.tbDrinksBeerTotal.ReadOnly = true;
 			this.tbDrinksBeerTotal.Size = new System.Drawing.Size(100, 20);
 			this.tbDrinksBeerTotal.TabIndex = 11;
-			this.tbDrinksBeerTotal.TextChanged += new System.EventHandler(this.drinkTotal_textChanged);
 			// 
 			// tbDrinksSoftTotal
 			// 
@@ -307,7 +309,6 @@
 			this.tbDrinksSoftTotal.ReadOnly = true;
 			this.tbDrinksSoftTotal.Size = new System.Drawing.Size(100, 20);
 			this.tbDrinksSoftTotal.TabIndex = 10;
-			this.tbDrinksSoftTotal.TextChanged += new System.EventHandler(this.drinkTotal_textChanged);
 			// 
 			// tbDrinksSodaTotal
 			// 
@@ -316,7 +317,6 @@
 			this.tbDrinksSodaTotal.ReadOnly = true;
 			this.tbDrinksSodaTotal.Size = new System.Drawing.Size(100, 20);
 			this.tbDrinksSodaTotal.TabIndex = 9;
-			this.tbDrinksSodaTotal.TextChanged += new System.EventHandler(this.drinkTotal_textChanged);
 			// 
 			// label4
 			// 
@@ -334,6 +334,7 @@
 			this.tbDrinksBeerQuantity.Size = new System.Drawing.Size(100, 20);
 			this.tbDrinksBeerQuantity.TabIndex = 5;
 			this.tbDrinksBeerQuantity.Text = "0";
+			this.tbDrinksBeerQuantity.TextChanged += new System.EventHandler(this.drinkTotal_textChanged);
 			// 
 			// tbDrinksSoftQuantity
 			// 
@@ -342,6 +343,7 @@
 			this.tbDrinksSoftQuantity.Size = new System.Drawing.Size(100, 20);
 			this.tbDrinksSoftQuantity.TabIndex = 4;
 			this.tbDrinksSoftQuantity.Text = "0";
+			this.tbDrinksSoftQuantity.TextChanged += new System.EventHandler(this.drinkTotal_textChanged);
 			// 
 			// tbDrinksSodaQuantity
 			// 
@@ -350,6 +352,7 @@
 			this.tbDrinksSodaQuantity.Size = new System.Drawing.Size(100, 20);
 			this.tbDrinksSodaQuantity.TabIndex = 3;
 			this.tbDrinksSodaQuantity.Text = "0";
+			this.tbDrinksSodaQuantity.TextChanged += new System.EventHandler(this.drinkTotal_textChanged);
 			// 
 			// label3
 			// 

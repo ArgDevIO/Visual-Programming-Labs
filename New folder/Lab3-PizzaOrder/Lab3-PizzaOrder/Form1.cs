@@ -70,6 +70,17 @@ namespace Lab3_PizzaOrder
 			tbTotal.Text = total.ToString();
 		}
 
-		
+		private void drinkTotal_textChanged(object sender, EventArgs e)
+		{
+			TextBox tbDrinkTotal = sender as TextBox;
+			if (tbDrinkTotal.Name.ToLower().Contains("soda"))
+				calculateDrinkPrice(tbDrinksSodaQuantity, tbDrinksSodaPrice, tbDrinksSodaTotal);
+			else if (tbDrinkTotal.Name.ToLower().Contains("soft"))
+				calculateDrinkPrice(tbDrinksSoftQuantity, tbDrinksSoftPrice, tbDrinksSoftTotal);
+			else if (tbDrinkTotal.Name.ToLower().Contains("beer"))
+				calculateDrinkPrice(tbDrinksBeerQuantity, tbDrinksBeerPrice, tbDrinksBeerTotal);
+
+			calculateTotal();
+		}
 	}
 }
