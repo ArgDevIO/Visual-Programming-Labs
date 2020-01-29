@@ -28,21 +28,21 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.gbSize = new System.Windows.Forms.GroupBox();
 			this.tbSizeLarge = new System.Windows.Forms.TextBox();
 			this.tbSizeMedium = new System.Windows.Forms.TextBox();
 			this.tbSizeSmall = new System.Windows.Forms.TextBox();
 			this.rbLarge = new System.Windows.Forms.RadioButton();
-			this.rdMedium = new System.Windows.Forms.RadioButton();
-			this.rdSmall = new System.Windows.Forms.RadioButton();
-			this.groupBox2 = new System.Windows.Forms.GroupBox();
+			this.rbMedium = new System.Windows.Forms.RadioButton();
+			this.rbSmall = new System.Windows.Forms.RadioButton();
+			this.gbExtras = new System.Windows.Forms.GroupBox();
 			this.cbKetchup = new System.Windows.Forms.CheckBox();
 			this.cbExtraCheese = new System.Windows.Forms.CheckBox();
 			this.cbPeppers = new System.Windows.Forms.CheckBox();
 			this.tbExtrasKetchup = new System.Windows.Forms.TextBox();
 			this.tbExtrasCheese = new System.Windows.Forms.TextBox();
 			this.tbExtrasPeppers = new System.Windows.Forms.TextBox();
-			this.groupBox3 = new System.Windows.Forms.GroupBox();
+			this.gbDrinks = new System.Windows.Forms.GroupBox();
 			this.label6 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
 			this.tbDrinksBeerPrice = new System.Windows.Forms.TextBox();
@@ -71,27 +71,27 @@
 			this.label10 = new System.Windows.Forms.Label();
 			this.label9 = new System.Windows.Forms.Label();
 			this.label8 = new System.Windows.Forms.Label();
-			this.groupBox1.SuspendLayout();
-			this.groupBox2.SuspendLayout();
-			this.groupBox3.SuspendLayout();
+			this.gbSize.SuspendLayout();
+			this.gbExtras.SuspendLayout();
+			this.gbDrinks.SuspendLayout();
 			this.groupBox4.SuspendLayout();
 			this.groupBox5.SuspendLayout();
 			this.SuspendLayout();
 			// 
-			// groupBox1
+			// gbSize
 			// 
-			this.groupBox1.Controls.Add(this.tbSizeLarge);
-			this.groupBox1.Controls.Add(this.tbSizeMedium);
-			this.groupBox1.Controls.Add(this.tbSizeSmall);
-			this.groupBox1.Controls.Add(this.rbLarge);
-			this.groupBox1.Controls.Add(this.rdMedium);
-			this.groupBox1.Controls.Add(this.rdSmall);
-			this.groupBox1.Location = new System.Drawing.Point(13, 13);
-			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(302, 131);
-			this.groupBox1.TabIndex = 0;
-			this.groupBox1.TabStop = false;
-			this.groupBox1.Text = "Size";
+			this.gbSize.Controls.Add(this.tbSizeLarge);
+			this.gbSize.Controls.Add(this.tbSizeMedium);
+			this.gbSize.Controls.Add(this.tbSizeSmall);
+			this.gbSize.Controls.Add(this.rbLarge);
+			this.gbSize.Controls.Add(this.rbMedium);
+			this.gbSize.Controls.Add(this.rbSmall);
+			this.gbSize.Location = new System.Drawing.Point(13, 13);
+			this.gbSize.Name = "gbSize";
+			this.gbSize.Size = new System.Drawing.Size(302, 131);
+			this.gbSize.TabIndex = 0;
+			this.gbSize.TabStop = false;
+			this.gbSize.Text = "Size";
 			// 
 			// tbSizeLarge
 			// 
@@ -129,44 +129,44 @@
 			this.rbLarge.UseVisualStyleBackColor = true;
 			this.rbLarge.CheckedChanged += new System.EventHandler(this.stateChanged);
 			// 
-			// rdMedium
+			// rbMedium
 			// 
-			this.rdMedium.AutoSize = true;
-			this.rdMedium.Location = new System.Drawing.Point(6, 56);
-			this.rdMedium.Name = "rdMedium";
-			this.rdMedium.Size = new System.Drawing.Size(62, 17);
-			this.rdMedium.TabIndex = 1;
-			this.rdMedium.TabStop = true;
-			this.rdMedium.Text = "Medium";
-			this.rdMedium.UseVisualStyleBackColor = true;
-			this.rdMedium.CheckedChanged += new System.EventHandler(this.stateChanged);
+			this.rbMedium.AutoSize = true;
+			this.rbMedium.Location = new System.Drawing.Point(6, 56);
+			this.rbMedium.Name = "rbMedium";
+			this.rbMedium.Size = new System.Drawing.Size(62, 17);
+			this.rbMedium.TabIndex = 1;
+			this.rbMedium.TabStop = true;
+			this.rbMedium.Text = "Medium";
+			this.rbMedium.UseVisualStyleBackColor = true;
+			this.rbMedium.CheckedChanged += new System.EventHandler(this.stateChanged);
 			// 
-			// rdSmall
+			// rbSmall
 			// 
-			this.rdSmall.AutoSize = true;
-			this.rdSmall.Location = new System.Drawing.Point(6, 19);
-			this.rdSmall.Name = "rdSmall";
-			this.rdSmall.Size = new System.Drawing.Size(50, 17);
-			this.rdSmall.TabIndex = 0;
-			this.rdSmall.TabStop = true;
-			this.rdSmall.Text = "Small";
-			this.rdSmall.UseVisualStyleBackColor = true;
-			this.rdSmall.CheckedChanged += new System.EventHandler(this.stateChanged);
+			this.rbSmall.AutoSize = true;
+			this.rbSmall.Location = new System.Drawing.Point(6, 19);
+			this.rbSmall.Name = "rbSmall";
+			this.rbSmall.Size = new System.Drawing.Size(50, 17);
+			this.rbSmall.TabIndex = 0;
+			this.rbSmall.TabStop = true;
+			this.rbSmall.Text = "Small";
+			this.rbSmall.UseVisualStyleBackColor = true;
+			this.rbSmall.CheckedChanged += new System.EventHandler(this.stateChanged);
 			// 
-			// groupBox2
+			// gbExtras
 			// 
-			this.groupBox2.Controls.Add(this.cbKetchup);
-			this.groupBox2.Controls.Add(this.cbExtraCheese);
-			this.groupBox2.Controls.Add(this.cbPeppers);
-			this.groupBox2.Controls.Add(this.tbExtrasKetchup);
-			this.groupBox2.Controls.Add(this.tbExtrasCheese);
-			this.groupBox2.Controls.Add(this.tbExtrasPeppers);
-			this.groupBox2.Location = new System.Drawing.Point(327, 13);
-			this.groupBox2.Name = "groupBox2";
-			this.groupBox2.Size = new System.Drawing.Size(302, 131);
-			this.groupBox2.TabIndex = 1;
-			this.groupBox2.TabStop = false;
-			this.groupBox2.Text = "Extras";
+			this.gbExtras.Controls.Add(this.cbKetchup);
+			this.gbExtras.Controls.Add(this.cbExtraCheese);
+			this.gbExtras.Controls.Add(this.cbPeppers);
+			this.gbExtras.Controls.Add(this.tbExtrasKetchup);
+			this.gbExtras.Controls.Add(this.tbExtrasCheese);
+			this.gbExtras.Controls.Add(this.tbExtrasPeppers);
+			this.gbExtras.Location = new System.Drawing.Point(327, 13);
+			this.gbExtras.Name = "gbExtras";
+			this.gbExtras.Size = new System.Drawing.Size(302, 131);
+			this.gbExtras.TabIndex = 1;
+			this.gbExtras.TabStop = false;
+			this.gbExtras.Text = "Extras";
 			// 
 			// cbKetchup
 			// 
@@ -225,29 +225,29 @@
 			this.tbExtrasPeppers.TabIndex = 3;
 			this.tbExtrasPeppers.Text = "40";
 			// 
-			// groupBox3
+			// gbDrinks
 			// 
-			this.groupBox3.Controls.Add(this.label6);
-			this.groupBox3.Controls.Add(this.label5);
-			this.groupBox3.Controls.Add(this.tbDrinksBeerPrice);
-			this.groupBox3.Controls.Add(this.tbDrinksSoftPrice);
-			this.groupBox3.Controls.Add(this.tbDrinksSodaPrice);
-			this.groupBox3.Controls.Add(this.tbDrinksBeerTotal);
-			this.groupBox3.Controls.Add(this.tbDrinksSoftTotal);
-			this.groupBox3.Controls.Add(this.tbDrinksSodaTotal);
-			this.groupBox3.Controls.Add(this.label4);
-			this.groupBox3.Controls.Add(this.tbDrinksBeerQuantity);
-			this.groupBox3.Controls.Add(this.tbDrinksSoftQuantity);
-			this.groupBox3.Controls.Add(this.tbDrinksSodaQuantity);
-			this.groupBox3.Controls.Add(this.label3);
-			this.groupBox3.Controls.Add(this.label2);
-			this.groupBox3.Controls.Add(this.label1);
-			this.groupBox3.Location = new System.Drawing.Point(13, 151);
-			this.groupBox3.Name = "groupBox3";
-			this.groupBox3.Size = new System.Drawing.Size(616, 145);
-			this.groupBox3.TabIndex = 2;
-			this.groupBox3.TabStop = false;
-			this.groupBox3.Text = "Drink";
+			this.gbDrinks.Controls.Add(this.label6);
+			this.gbDrinks.Controls.Add(this.label5);
+			this.gbDrinks.Controls.Add(this.tbDrinksBeerPrice);
+			this.gbDrinks.Controls.Add(this.tbDrinksSoftPrice);
+			this.gbDrinks.Controls.Add(this.tbDrinksSodaPrice);
+			this.gbDrinks.Controls.Add(this.tbDrinksBeerTotal);
+			this.gbDrinks.Controls.Add(this.tbDrinksSoftTotal);
+			this.gbDrinks.Controls.Add(this.tbDrinksSodaTotal);
+			this.gbDrinks.Controls.Add(this.label4);
+			this.gbDrinks.Controls.Add(this.tbDrinksBeerQuantity);
+			this.gbDrinks.Controls.Add(this.tbDrinksSoftQuantity);
+			this.gbDrinks.Controls.Add(this.tbDrinksSodaQuantity);
+			this.gbDrinks.Controls.Add(this.label3);
+			this.gbDrinks.Controls.Add(this.label2);
+			this.gbDrinks.Controls.Add(this.label1);
+			this.gbDrinks.Location = new System.Drawing.Point(13, 151);
+			this.gbDrinks.Name = "gbDrinks";
+			this.gbDrinks.Size = new System.Drawing.Size(616, 145);
+			this.gbDrinks.TabIndex = 2;
+			this.gbDrinks.TabStop = false;
+			this.gbDrinks.Text = "Drink";
 			// 
 			// label6
 			// 
@@ -404,15 +404,18 @@
 			this.btnOrder.TabIndex = 3;
 			this.btnOrder.Text = "Order";
 			this.btnOrder.UseVisualStyleBackColor = true;
+			this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
 			// 
 			// btnCancel
 			// 
+			this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this.btnCancel.Location = new System.Drawing.Point(169, 118);
 			this.btnCancel.Name = "btnCancel";
 			this.btnCancel.Size = new System.Drawing.Size(120, 23);
 			this.btnCancel.TabIndex = 4;
 			this.btnCancel.Text = "Cancel";
 			this.btnCancel.UseVisualStyleBackColor = true;
+			this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
 			// 
 			// tbDessertPrice
 			// 
@@ -518,22 +521,26 @@
 			// 
 			// Form1
 			// 
+			this.AcceptButton = this.btnOrder;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.CancelButton = this.btnCancel;
 			this.ClientSize = new System.Drawing.Size(645, 470);
 			this.Controls.Add(this.groupBox5);
 			this.Controls.Add(this.groupBox4);
-			this.Controls.Add(this.groupBox3);
-			this.Controls.Add(this.groupBox2);
-			this.Controls.Add(this.groupBox1);
+			this.Controls.Add(this.gbDrinks);
+			this.Controls.Add(this.gbExtras);
+			this.Controls.Add(this.gbSize);
+			this.KeyPreview = true;
 			this.Name = "Form1";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Pizza Order";
-			this.groupBox1.ResumeLayout(false);
-			this.groupBox1.PerformLayout();
-			this.groupBox2.ResumeLayout(false);
-			this.groupBox2.PerformLayout();
-			this.groupBox3.ResumeLayout(false);
-			this.groupBox3.PerformLayout();
+			this.gbSize.ResumeLayout(false);
+			this.gbSize.PerformLayout();
+			this.gbExtras.ResumeLayout(false);
+			this.gbExtras.PerformLayout();
+			this.gbDrinks.ResumeLayout(false);
+			this.gbDrinks.PerformLayout();
 			this.groupBox4.ResumeLayout(false);
 			this.groupBox4.PerformLayout();
 			this.groupBox5.ResumeLayout(false);
@@ -544,21 +551,21 @@
 
 		#endregion
 
-		private System.Windows.Forms.GroupBox groupBox1;
+		private System.Windows.Forms.GroupBox gbSize;
 		private System.Windows.Forms.TextBox tbSizeLarge;
 		private System.Windows.Forms.TextBox tbSizeMedium;
 		private System.Windows.Forms.TextBox tbSizeSmall;
 		private System.Windows.Forms.RadioButton rbLarge;
-		private System.Windows.Forms.RadioButton rdMedium;
-		private System.Windows.Forms.RadioButton rdSmall;
-		private System.Windows.Forms.GroupBox groupBox2;
+		private System.Windows.Forms.RadioButton rbMedium;
+		private System.Windows.Forms.RadioButton rbSmall;
+		private System.Windows.Forms.GroupBox gbExtras;
 		private System.Windows.Forms.CheckBox cbKetchup;
 		private System.Windows.Forms.CheckBox cbExtraCheese;
 		private System.Windows.Forms.CheckBox cbPeppers;
 		private System.Windows.Forms.TextBox tbExtrasKetchup;
 		private System.Windows.Forms.TextBox tbExtrasCheese;
 		private System.Windows.Forms.TextBox tbExtrasPeppers;
-		private System.Windows.Forms.GroupBox groupBox3;
+		private System.Windows.Forms.GroupBox gbDrinks;
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.TextBox tbDrinksBeerPrice;

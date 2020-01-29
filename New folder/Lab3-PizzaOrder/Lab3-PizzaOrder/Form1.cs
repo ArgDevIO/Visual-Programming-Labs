@@ -23,9 +23,9 @@ namespace Lab3_PizzaOrder
 			float result = 0f;
 
 			// Size radio buttons
-			if (rdSmall.Checked && float.TryParse(tbSizeSmall.Text, out result))
+			if (rbSmall.Checked && float.TryParse(tbSizeSmall.Text, out result))
 				num += result;
-			if (rdMedium.Checked && float.TryParse(tbSizeMedium.Text, out result))
+			if (rbMedium.Checked && float.TryParse(tbSizeMedium.Text, out result))
 				num += result;
 			if (rbLarge.Checked && float.TryParse(tbSizeLarge.Text, out result))
 				num += result;
@@ -130,6 +130,43 @@ namespace Lab3_PizzaOrder
 		private void tbChange_TextChanged(object sender, EventArgs e)
 		{
 			btnOrder.Enabled = !tbChange.Text.Contains("-");
+		}
+
+		private void btnCancel_Click(object sender, EventArgs e)
+		{
+			DialogResult result = MessageBox.Show("Do you want to cancel your order?", "Cancel order?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+			if (result == DialogResult.Yes)
+				Application.Exit();
+		}
+
+		private void btnOrder_Click(object sender, EventArgs e)
+		{
+			StringBuilder sb = new StringBuilder();
+
+			// Pizza Size
+			var selectedPizzaRadioButton = gbSize.Controls.OfType<RadioButton>().First(r => r.Checked);
+			sb.Append(selectedPizzaRadioButton.Text).Append(" Pizza\n");
+
+			// Extras
+			List<CheckBox> selectedExtrasCheckBoxes = gbExtras.Controls.OfType<CheckBox>().Where(cb => cb.Checked).ToList();
+			if (selectedExtrasCheckBoxes.Count != 0) 
+				sb.Append("Extras:\n");
+			foreach (CheckBox cb in selectedExtrasCheckBoxes)
+				sb.Append(cb.Text).Append("\n");
+
+			// Drinks
+			List<TextBox> drinksQtyTBs = gbDrinks.Controls.OfType<TextBox>().Where(tb => !tb.Text.Equals("0") && tb.Name.ToLower().Contains("quantity")).ToList();
+			if (drinksQtyTBs.Count != 0)
+				sb.Append("Drinks:\n");
+			foreach (TextBox tb in drinksQtyTBs)
+			{
+				sb.Append(tb.Text);
+				if (tb.Name.Contains("Soda")) sb.Append(" Coca Cola / Fanta / Sprite\n");
+				else if (tb.Name.Contains("Soft")) sb.Append(" Apple / Orange juice\n");
+				else if (tb.Name.Contains("Beer")) sb.Append(" Beer\n");
+			}
+
+			MessageBox.Show(sb.ToString(), "Your order", MessageBoxButtons.OK);
 		}
 	}
 }
